@@ -1,14 +1,15 @@
 import { Container } from 'typedi';
-import * as mongoose from 'mongoose';
+import mongoose from 'mongoose';
 import { IUser } from '../../interfaces/IUser';
 
 /**
- * Attach user to req.user
+ * Attach user to req.currentUser
  * @param {*} req Express req Object
  * @param {*} res  Express res Object
  * @param {*} next  Express next Function
  */
 const attachCurrentUser = async (req, res, next) => {
+  const Logger = Container.get('logger');
   try {
     const UserModel = Container.get('userModel') as mongoose.Model<IUser & mongoose.Document>;
     const userRecord = await UserModel.findById(req.token._id);
@@ -21,8 +22,7 @@ const attachCurrentUser = async (req, res, next) => {
     req.currentUser = currentUser;
     return next();
   } catch (e) {
-    console.log('🔥 Error attaching user to req');
-    console.log(e);
+    Logger.error('🔥 Error attaching user to req: %o', e);
     return next(e);
   }
 };

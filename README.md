@@ -66,8 +66,8 @@ It uses nodemon for livereloading :peace-fingers:
 - [x] API Validation layer (Celebrate+Joi)
 - [ ] Unit tests examples
 - [ ] [Cluster mode](https://softwareontheroad.com/nodejs-scalability-issues?utm_source=github&utm_medium=readme)
-- [ ] The logging _'layer'_ 
-- [ ] Add ageda dashboard
+- [x] The logging _'layer'_ 
+- [ ] Add agenda dashboard
 - [x] Continuous integration with CircleCI 😍
 - [ ] Deploys script and docs for AWS Elastic Beanstalk and Heroku
 - [ ] Integration test with newman 😉
@@ -76,13 +76,13 @@ It uses nodemon for livereloading :peace-fingers:
 
 # FAQ 
 
- ## Where should I put the FrontEnd code? Is this a good backend for Angular o React or Vue or _whatever_ ?
+ ## Where should I put the FrontEnd code? Is this a good backend for Angular or React or Vue or _whatever_ ?
 
   [It's not a good idea to have node.js serving static assets a.k.a the frontend](https://softwareontheroad.com/nodejs-scalability-issues?utm_source=github&utm_medium=readme)
 
   Also, I don't wanna take part in frontend frameworks wars 😅
 
-  Just use the frontend framework you like the most _or hate the less_ it will work 😁
+  Just use the frontend framework you like the most _or hate the least_. It will work 😁
 
  ## Don't you think you can add X layer to do Y? Why do you still use express if the Serverless Framework is better and it's more reliable?
 
