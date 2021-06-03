@@ -25,6 +25,7 @@ export default {
    * Your secret sauce
    */
   jwtSecret: process.env.JWT_SECRET,
+  jwtAlgorithm: process.env.JWT_ALGO,
 
   /**
    * Used by winston logger
@@ -60,6 +61,7 @@ export default {
    */
   emails: {
     apiKey: process.env.MAILGUN_API_KEY,
+    apiUsername: process.env.MAILGUN_USERNAME,
     domain: process.env.MAILGUN_DOMAIN
   }
 };
